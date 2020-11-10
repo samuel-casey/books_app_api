@@ -634,3 +634,168 @@ Processing by BooksController#destroy as */*
 Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2539)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1462267875387580695)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20201110200013)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "age" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201110200013"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1462267875387580695)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Elvin8"], ["password_digest", "$2a$12$ulU/2x8YVwER23b4PTbUnONxKS4s8Pcbqp3Euqq5m.doPMUo9yQYK"], ["created_at", "2020-11-10 20:13:28.519487"], ["updated_at", "2020-11-10 20:13:28.519487"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Ronny97"], ["password_digest", "$2a$12$eqXGkuyktTBfyNA8QC5eyueSM1sV2mLXhZVuxI3hS6BSJzgpCeQ.O"], ["created_at", "2020-11-10 20:13:28.731456"], ["updated_at", "2020-11-10 20:13:28.731456"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Nida13"], ["password_digest", "$2a$12$rIw3dVQ3Qedw60gkwXyLY.l8tMXhtQJxU.s7Bc.8HBRm8D7mxLDIu"], ["created_at", "2020-11-10 20:13:28.947151"], ["updated_at", "2020-11-10 20:13:28.947151"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Reuben7"], ["password_digest", "$2a$12$cNDFwk6lLtbQF.7Q9MHEt.gYRCqqFEDr2C8rm1.getIq5hEePKnUG"], ["created_at", "2020-11-10 20:13:29.156270"], ["updated_at", "2020-11-10 20:13:29.156270"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Alva46"], ["password_digest", "$2a$12$OfR6wgggScRs4Sh5/tqHguY8qqypQPBwUFI5scys.OQ2fFcjbUjse"], ["created_at", "2020-11-10 20:13:29.373679"], ["updated_at", "2020-11-10 20:13:29.373679"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Markita34"], ["password_digest", "$2a$12$Ul6IXhxSy7l7LSBViUaJ8e0Yo/w57SpJMNNjMQMLb9T1jp.9D1y7a"], ["created_at", "2020-11-10 20:13:29.587731"], ["updated_at", "2020-11-10 20:13:29.587731"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Danuta95"], ["password_digest", "$2a$12$1Ob32NORzKvgJzQp0EAdEudzgMui34GQV.Pcl6UX5rH2NOYTfGUaC"], ["created_at", "2020-11-10 20:13:29.802792"], ["updated_at", "2020-11-10 20:13:29.802792"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Denny5"], ["password_digest", "$2a$12$tWjL1pWga3wL7F5ULhLWBubrEptXjsbxyBu5W1cKVq0eYb/Z6znji"], ["created_at", "2020-11-10 20:13:30.020260"], ["updated_at", "2020-11-10 20:13:30.020260"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Dan53"], ["password_digest", "$2a$12$iWDJ286LAiAanUPZb20PIOni6ju9dlwYU4FnBkhgohCBYM8OtJVJ2"], ["created_at", "2020-11-10 20:13:30.221778"], ["updated_at", "2020-11-10 20:13:30.221778"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Ila63"], ["password_digest", "$2a$12$ZRRC.Q5scn0lZdWU4Q/P1eMKWbYSDYw7Roh7ng3urs05IOHg4ZDZe"], ["created_at", "2020-11-10 20:13:30.417410"], ["updated_at", "2020-11-10 20:13:30.417410"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Jaimie29"], ["password_digest", "$2a$12$ZGLUoDlyqcEl8GMQvqaPS.wuXWYEEyTqQhWp9MwXROlFdkuFUPoLe"], ["age", 65], ["created_at", "2020-11-10 20:15:05.446306"], ["updated_at", "2020-11-10 20:15:05.446306"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Delila90"], ["password_digest", "$2a$12$7HXwv7/V04A/fPVrNVP48usce4x3KENlPcQcKvDYqBzrfbuElSX7W"], ["age", 22], ["created_at", "2020-11-10 20:15:05.665811"], ["updated_at", "2020-11-10 20:15:05.665811"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Linnie94"], ["password_digest", "$2a$12$JQCfZC8/7irbUnBgrjEvV.aGtE.WZOdXPugyEZSoRk8md9CFhoIGm"], ["age", 38], ["created_at", "2020-11-10 20:15:05.884690"], ["updated_at", "2020-11-10 20:15:05.884690"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Verona49"], ["password_digest", "$2a$12$IK0DTQSUwAdzwjjQczaOq.v4sOvBNzGIyc5d/rKYBkW3jFp6.Qpg."], ["age", 60], ["created_at", "2020-11-10 20:15:06.102041"], ["updated_at", "2020-11-10 20:15:06.102041"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Jospeh92"], ["password_digest", "$2a$12$TZe.eIPSyycZggMoXxdQquWL09n5kwIODLnCMC.05Zm2nmMhq7cIe"], ["age", 40], ["created_at", "2020-11-10 20:15:06.318093"], ["updated_at", "2020-11-10 20:15:06.318093"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Siobhan15"], ["password_digest", "$2a$12$Of6qZluyV5ln/Yn04i4v0uW0NoQhWeWeaTCpecdPkaGtYr56SjbGq"], ["age", 22], ["created_at", "2020-11-10 20:15:06.535762"], ["updated_at", "2020-11-10 20:15:06.535762"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Porfirio16"], ["password_digest", "$2a$12$EeqcUYcbb0XnORUsTDQQd.WmDRd9yNXORazZWrgRnopnxEVNA351i"], ["age", 42], ["created_at", "2020-11-10 20:15:06.752486"], ["updated_at", "2020-11-10 20:15:06.752486"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Mariko72"], ["password_digest", "$2a$12$T0Sy9UO/2gG7m1VWx1DqLulWBSMqvAPce3iHfRpEragVzyaG1f6gK"], ["age", 48], ["created_at", "2020-11-10 20:15:06.969636"], ["updated_at", "2020-11-10 20:15:06.969636"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Faustina29"], ["password_digest", "$2a$12$fe4iRzv.fzbEJQokEVRYveyc8cG1lOFUwI1egHcw8BMvJOB64IE4C"], ["age", 22], ["created_at", "2020-11-10 20:15:07.185824"], ["updated_at", "2020-11-10 20:15:07.185824"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Arlyne54"], ["password_digest", "$2a$12$L1l.VCKpOlfmzhME0sx1cOTn35CO76grZ1Tj4YXbm/LUBzuZ0bUK6"], ["age", 54], ["created_at", "2020-11-10 20:15:07.402703"], ["updated_at", "2020-11-10 20:15:07.402703"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/login" for ::1 at 2020-11-10 16:04:14 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/users_controller.rb:40: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/users_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+Started POST "/login" for ::1 at 2020-11-10 16:04:30 -0500
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/login" for ::1 at 2020-11-10 16:05:09 -0500
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/login" for ::1 at 2020-11-10 16:05:48 -0500
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/login" for ::1 at 2020-11-10 16:06:41 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"Waffles McGee", "password"=>"[FILTERED]", "age"=>99, "user"=>{"username"=>"Waffles McGee", "age"=>99}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Waffles McGee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 1273)
+
+
+Started POST "/users" for ::1 at 2020-11-10 16:07:40 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Waffles McGee", "password"=>"[FILTERED]", "age"=>99, "user"=>{"username"=>"Waffles McGee", "age"=>99}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Waffles McGee"], ["password_digest", "$2a$12$p3qh8x8IM3HX2iyrZ6YNsumh7ikxMgzwTtbAv1VVsQ8j9tv7w5SuW"], ["age", 99], ["created_at", "2020-11-10 21:07:40.798642"], ["updated_at", "2020-11-10 21:07:40.798642"]]
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+Completed 200 OK in 268ms (Views: 0.4ms | ActiveRecord: 13.0ms | Allocations: 5978)
+
+
+Started POST "/login" for ::1 at 2020-11-10 16:10:45 -0500
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"Waffles McGee", "password"=>"[FILTERED]", "age"=>99, "user"=>{"username"=>"Waffles McGee", "age"=>99}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Waffles McGee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `login'
+Completed 200 OK in 242ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 1000)
+
+
+Started GET "/auto_login" for ::1 at 2020-11-10 16:11:25 -0500
+Processing by UsersController#auto_login as */*
+  Parameters: {"username"=>"Waffles McGee", "password"=>"[FILTERED]", "age"=>99, "user"=>{"username"=>"Waffles McGee", "age"=>99}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1085)
+
+
+Started GET "/auto_login" for ::1 at 2020-11-10 16:13:22 -0500
+Processing by UsersController#auto_login as */*
+  Parameters: {"username"=>"Waffles McGee", "password"=>"[FILTERED]", "age"=>99, "user"=>{"username"=>"Waffles McGee", "age"=>99}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 7.7ms | Allocations: 3761)
+
+
+Started GET "/auto_login" for ::1 at 2020-11-10 16:13:37 -0500
+Processing by UsersController#auto_login as */*
+  Parameters: {"username"=>"Waffles McGee", "password"=>"[FILTERED]", "age"=>99, "user"=>{"username"=>"Waffles McGee", "age"=>99}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 8.9ms | Allocations: 3788)
+
+
+Started GET "/auto_login" for ::1 at 2020-11-10 16:14:03 -0500
+Processing by UsersController#auto_login as */*
+  Parameters: {"username"=>"Waffles McGee", "password"=>"[FILTERED]", "age"=>99, "user"=>{"username"=>"Waffles McGee", "age"=>99}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `logged_in_user'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 7.6ms | Allocations: 3785)
+
+
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
