@@ -20,6 +20,10 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  port: 5432
+  user: test
+  password: test
 
 development:
   <<: *default
@@ -80,6 +84,4 @@ test:
 #
 production:
   <<: *default
-  database: books_app_api_production
-  username: books_app_api
-  password: <%= ENV['BOOKS_APP_API_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
