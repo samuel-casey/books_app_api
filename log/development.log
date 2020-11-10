@@ -33,3 +33,604 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 857)
 
 
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1462267875387580695)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20201110175049)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying, "author" character varying, "genre" character varying, "publisher" character varying, "publish_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201110175049"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-10 17:51:56.510416"], ["updated_at", "2020-11-10 17:51:56.510416"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1462267875387580695)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Stranger in a Strange Land"], ["author", "The Hon. Leanne Hickle"], ["genre", "Classic"], ["publisher", "Caister Academic Press"], ["publish_date", "2020-07-02"], ["created_at", "2020-11-10 17:55:24.315077"], ["updated_at", "2020-11-10 17:55:24.315077"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "In a Dry Season"], ["author", "Ira Bahringer"], ["genre", "Fantasy"], ["publisher", "Bella Books"], ["publish_date", "2020-10-10"], ["created_at", "2020-11-10 17:55:24.321705"], ["updated_at", "2020-11-10 17:55:24.321705"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fame Is the Spur"], ["author", "Rene Zboncak"], ["genre", "Crime/Detective"], ["publisher", "Matthias Media"], ["publish_date", "2020-05-10"], ["created_at", "2020-11-10 17:55:24.325469"], ["updated_at", "2020-11-10 17:55:24.325469"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Cricket on the Hearth"], ["author", "Msgr. Aleta Dickinson"], ["genre", "Mystery"], ["publisher", "Dalkey Archive Press"], ["publish_date", "2020-06-04"], ["created_at", "2020-11-10 17:55:24.328875"], ["updated_at", "2020-11-10 17:55:24.328875"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Terrible Swift Sword"], ["author", "Ronny Howell"], ["genre", "Fanfiction"], ["publisher", "Holland Park Press"], ["publish_date", "2020-04-14"], ["created_at", "2020-11-10 17:55:24.332190"], ["updated_at", "2020-11-10 17:55:24.332190"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Carrion Comfort"], ["author", "Rep. Jeffry Weber"], ["genre", "Fantasy"], ["publisher", "Ignatius Press"], ["publish_date", "2020-03-13"], ["created_at", "2020-11-10 17:55:24.336242"], ["updated_at", "2020-11-10 17:55:24.336242"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Consider the Lilies"], ["author", "Matt Ullrich"], ["genre", "Horror"], ["publisher", "Seagull Books"], ["publish_date", "2020-03-08"], ["created_at", "2020-11-10 17:55:24.339977"], ["updated_at", "2020-11-10 17:55:24.339977"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Time of our Darkness"], ["author", "Prof. Von Bernhard"], ["genre", "Realistic fiction"], ["publisher", "Andrews McMeel Publishing"], ["publish_date", "2020-06-23"], ["created_at", "2020-11-10 17:55:24.343572"], ["updated_at", "2020-11-10 17:55:24.343572"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Doors of Perception"], ["author", "Takisha Hintz"], ["genre", "Western"], ["publisher", "Hodder & Stoughton"], ["publish_date", "2019-12-19"], ["created_at", "2020-11-10 17:55:24.346809"], ["updated_at", "2020-11-10 17:55:24.346809"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Sun Also Rises"], ["author", "Mr. Rachele Kilback"], ["genre", "Western"], ["publisher", "Library of America"], ["publish_date", "2020-10-11"], ["created_at", "2020-11-10 17:55:24.350224"], ["updated_at", "2020-11-10 17:55:24.350224"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Now Sleeps the Crimson Petal"], ["author", "The Hon. Erich McLaughlin"], ["genre", "Western"], ["publisher", "Harper & Row"], ["publish_date", "2020-03-30"], ["created_at", "2020-11-10 17:55:24.354258"], ["updated_at", "2020-11-10 17:55:24.354258"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Bury My Heart at Wounded Knee"], ["author", "Rep. Vilma Haag"], ["genre", "Horror"], ["publisher", "NavPress"], ["publish_date", "2020-08-02"], ["created_at", "2020-11-10 17:55:24.357541"], ["updated_at", "2020-11-10 17:55:24.357541"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "No Highway"], ["author", "Jeneva Welch DVM"], ["genre", "Historical fiction"], ["publisher", "Karadi Tales"], ["publish_date", "2019-12-23"], ["created_at", "2020-11-10 17:55:24.361026"], ["updated_at", "2020-11-10 17:55:24.361026"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Sun Also Rises"], ["author", "Fausto Donnelly"], ["genre", "Science fiction"], ["publisher", "Anvil Press Poetry"], ["publish_date", "2020-04-12"], ["created_at", "2020-11-10 17:55:24.364844"], ["updated_at", "2020-11-10 17:55:24.364844"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Look Homeward, Angel"], ["author", "Williams Mohr"], ["genre", "Science fiction"], ["publisher", "Ladybird Books"], ["publish_date", "2020-03-30"], ["created_at", "2020-11-10 17:55:24.369193"], ["updated_at", "2020-11-10 17:55:24.369193"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "That Hideous Strength"], ["author", "Gov. Edmundo Barrows"], ["genre", "Speech"], ["publisher", "O'Reilly Media"], ["publish_date", "2020-02-28"], ["created_at", "2020-11-10 17:55:24.372692"], ["updated_at", "2020-11-10 17:55:24.372692"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "When the Green Woods Laugh"], ["author", "Raina Leuschke Jr."], ["genre", "Biography/Autobiography"], ["publisher", "New Directions Publishing"], ["publish_date", "2020-01-30"], ["created_at", "2020-11-10 17:55:24.375936"], ["updated_at", "2020-11-10 17:55:24.375936"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Eyeless in Gaza"], ["author", "Dannette Hodkiewicz"], ["genre", "Mystery"], ["publisher", "Scholastic Press"], ["publish_date", "2020-10-30"], ["created_at", "2020-11-10 17:55:24.379931"], ["updated_at", "2020-11-10 17:55:24.379931"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Cabbages and Kings"], ["author", "Chiquita Johnston"], ["genre", "Speech"], ["publisher", "Darakwon Press"], ["publish_date", "2019-11-18"], ["created_at", "2020-11-10 17:55:24.383790"], ["updated_at", "2020-11-10 17:55:24.383790"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I Will Fear No Evil"], ["author", "Sharonda Fay"], ["genre", "Fanfiction"], ["publisher", "New English Library"], ["publish_date", "2020-04-06"], ["created_at", "2020-11-10 17:55:24.391062"], ["updated_at", "2020-11-10 17:55:24.391062"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Brandy of the Damned"], ["author", "Jena Donnelly"], ["genre", "Fanfiction"], ["publisher", "Target Books"], ["publish_date", "2020-11-02"], ["created_at", "2020-11-10 17:55:24.394784"], ["updated_at", "2020-11-10 17:55:24.394784"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Edna O'Brien"], ["author", "Rachal Dickens"], ["genre", "Crime/Detective"], ["publisher", "Carcanet Press"], ["publish_date", "2019-12-22"], ["created_at", "2020-11-10 17:55:24.398842"], ["updated_at", "2020-11-10 17:55:24.398842"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Stranger in a Strange Land"], ["author", "Otha Reilly IV"], ["genre", "Legend"], ["publisher", "HarperPrism"], ["publish_date", "2020-06-17"], ["created_at", "2020-11-10 17:55:24.403074"], ["updated_at", "2020-11-10 17:55:24.403074"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Doors of Perception"], ["author", "Brandon Hyatt Ret."], ["genre", "Legend"], ["publisher", "Basic Books"], ["publish_date", "2020-06-11"], ["created_at", "2020-11-10 17:55:24.406579"], ["updated_at", "2020-11-10 17:55:24.406579"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "That Hideous Strength"], ["author", "Jame Kerluke"], ["genre", "Metafiction"], ["publisher", "George Routledge & Sons"], ["publish_date", "2019-11-29"], ["created_at", "2020-11-10 17:55:24.410660"], ["updated_at", "2020-11-10 17:55:24.410660"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Mother Night"], ["author", "Kena Denesik"], ["genre", "Mystery"], ["publisher", "Charles Scribner's Sons"], ["publish_date", "2020-04-05"], ["created_at", "2020-11-10 17:55:24.413978"], ["updated_at", "2020-11-10 17:55:24.413978"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "A Confederacy of Dunces"], ["author", "Pres. Jodie Kuhic"], ["genre", "Fiction in verse"], ["publisher", "Holt McDougal"], ["publish_date", "2019-12-07"], ["created_at", "2020-11-10 17:55:24.417525"], ["updated_at", "2020-11-10 17:55:24.417525"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Beneath the Bleeding"], ["author", "Msgr. Prudence Rau"], ["genre", "Narrative nonfiction"], ["publisher", "Atheneum Books"], ["publish_date", "2020-05-22"], ["created_at", "2020-11-10 17:55:24.421615"], ["updated_at", "2020-11-10 17:55:24.421615"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "A Farewell to Arms"], ["author", "Elvina Olson"], ["genre", "Mythopoeia"], ["publisher", "Vintage Books at Random House"], ["publish_date", "2020-10-21"], ["created_at", "2020-11-10 17:55:24.425127"], ["updated_at", "2020-11-10 17:55:24.425127"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Cabbages and Kings"], ["author", "Eunice Flatley"], ["genre", "Comic/Graphic Novel"], ["publisher", "Reed Publishing"], ["publish_date", "2020-01-20"], ["created_at", "2020-11-10 17:55:24.428822"], ["updated_at", "2020-11-10 17:55:24.428822"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Green Bay Tree"], ["author", "Mr. Sharice Robel"], ["genre", "Short story"], ["publisher", "Harry N. Abrams, Inc."], ["publish_date", "2020-06-16"], ["created_at", "2020-11-10 17:55:24.432468"], ["updated_at", "2020-11-10 17:55:24.432468"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "A Time to Kill"], ["author", "Celestina Hauck"], ["genre", "Fiction in verse"], ["publisher", "Carlton Books"], ["publish_date", "2020-01-21"], ["created_at", "2020-11-10 17:55:24.436495"], ["updated_at", "2020-11-10 17:55:24.436495"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "This Lime Tree Bower"], ["author", "Amos Cummings"], ["genre", "Fantasy"], ["publisher", "Blackie and Son Limited"], ["publish_date", "2020-01-02"], ["created_at", "2020-11-10 17:55:24.439815"], ["updated_at", "2020-11-10 17:55:24.439815"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Cabbages and Kings"], ["author", "Alec Armstrong"], ["genre", "Biography/Autobiography"], ["publisher", "Allen Ltd"], ["publish_date", "2019-12-06"], ["created_at", "2020-11-10 17:55:24.443269"], ["updated_at", "2020-11-10 17:55:24.443269"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Moab Is My Washpot"], ["author", "Dora Dicki"], ["genre", "Fiction in verse"], ["publisher", "Vintage Books"], ["publish_date", "2020-02-29"], ["created_at", "2020-11-10 17:55:24.446555"], ["updated_at", "2020-11-10 17:55:24.446555"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Line of Beauty"], ["author", "Cathi Pouros"], ["genre", "Folklore"], ["publisher", "Del Rey Books"], ["publish_date", "2020-02-15"], ["created_at", "2020-11-10 17:55:24.450161"], ["updated_at", "2020-11-10 17:55:24.450161"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Tirra Lirra by the River"], ["author", "Harvey Schuster"], ["genre", "Fiction in verse"], ["publisher", "Leaf Books"], ["publish_date", "2019-12-31"], ["created_at", "2020-11-10 17:55:24.454240"], ["updated_at", "2020-11-10 17:55:24.454240"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Last Temptation"], ["author", "Don Pagac JD"], ["genre", "Suspense/Thriller"], ["publisher", "NavPress"], ["publish_date", "2020-05-30"], ["created_at", "2020-11-10 17:55:24.457986"], ["updated_at", "2020-11-10 17:55:24.457986"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "An Instant In The Wind"], ["author", "William Kutch"], ["genre", "Legend"], ["publisher", "BBC Books"], ["publish_date", "2019-12-11"], ["created_at", "2020-11-10 17:55:24.461832"], ["updated_at", "2020-11-10 17:55:24.461832"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Line of Beauty"], ["author", "Amada Witting"], ["genre", "Fable"], ["publisher", "Holt McDougal"], ["publish_date", "2020-04-29"], ["created_at", "2020-11-10 17:55:24.465003"], ["updated_at", "2020-11-10 17:55:24.465003"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "A Monstrous Regiment of Women"], ["author", "Lanny Boyle"], ["genre", "Fanfiction"], ["publisher", "Marshall Cavendish"], ["publish_date", "2020-07-14"], ["created_at", "2020-11-10 17:55:24.468655"], ["updated_at", "2020-11-10 17:55:24.468655"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Waste Land"], ["author", "Dean Howe"], ["genre", "Realistic fiction"], ["publisher", "Del Rey Books"], ["publish_date", "2020-09-17"], ["created_at", "2020-11-10 17:55:24.472077"], ["updated_at", "2020-11-10 17:55:24.472077"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Brandy of the Damned"], ["author", "Joey Marquardt"], ["genre", "Realistic fiction"], ["publisher", "Godwit Press"], ["publish_date", "2020-08-25"], ["created_at", "2020-11-10 17:55:24.475595"], ["updated_at", "2020-11-10 17:55:24.475595"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Specimen Days"], ["author", "Maxine Flatley Sr."], ["genre", "Mythology"], ["publisher", "Libertas Academica"], ["publish_date", "2020-09-15"], ["created_at", "2020-11-10 17:55:24.478768"], ["updated_at", "2020-11-10 17:55:24.478768"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Wind's Twelve Quarters"], ["author", "Santiago Dare"], ["genre", "Horror"], ["publisher", "Tammi"], ["publish_date", "2019-12-21"], ["created_at", "2020-11-10 17:55:24.481945"], ["updated_at", "2020-11-10 17:55:24.481945"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Specimen Days"], ["author", "Goldie Stark"], ["genre", "Fable"], ["publisher", "Target Books"], ["publish_date", "2020-10-26"], ["created_at", "2020-11-10 17:55:24.485600"], ["updated_at", "2020-11-10 17:55:24.485600"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "To Say Nothing of the Dog"], ["author", "Myrna Kerluke"], ["genre", "Mythopoeia"], ["publisher", "Penguin Books"], ["publish_date", "2020-08-02"], ["created_at", "2020-11-10 17:55:24.489127"], ["updated_at", "2020-11-10 17:55:24.489127"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "No Highway"], ["author", "Pattie Vandervort"], ["genre", "Horror"], ["publisher", "Chambers Harrap"], ["publish_date", "2020-01-14"], ["created_at", "2020-11-10 17:55:24.492778"], ["updated_at", "2020-11-10 17:55:24.492778"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Wives of Bath"], ["author", "Dexter Gleichner DVM"], ["genre", "Fable"], ["publisher", "Zondervan"], ["publish_date", "2020-09-08"], ["created_at", "2020-11-10 17:55:24.495888"], ["updated_at", "2020-11-10 17:55:24.495888"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "A Confederacy of Dunces"], ["author", "Katerine Spinka DDS"], ["genre", "Mythology"], ["publisher", "G-Unit Books"], ["publish_date", "2020-05-09"], ["created_at", "2020-11-10 17:55:24.499109"], ["updated_at", "2020-11-10 17:55:24.499109"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Wildfire at Midnight"], ["author", "Ouida Gutmann"], ["genre", "Fiction narrative"], ["publisher", "Velazquez Press"], ["publish_date", "2020-01-29"], ["created_at", "2020-11-10 17:55:24.503552"], ["updated_at", "2020-11-10 17:55:24.503552"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Sun Also Rises"], ["author", "Nelle Leffler DO"], ["genre", "Realistic fiction"], ["publisher", "Liberty Fund"], ["publish_date", "2020-05-07"], ["created_at", "2020-11-10 17:55:24.507107"], ["updated_at", "2020-11-10 17:55:24.507107"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fear and Trembling"], ["author", "Elvin Tromp"], ["genre", "Fiction narrative"], ["publisher", "Godwit Press"], ["publish_date", "2020-08-26"], ["created_at", "2020-11-10 17:55:24.510389"], ["updated_at", "2020-11-10 17:55:24.510389"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I Will Fear No Evil"], ["author", "Petronila Borer"], ["genre", "Mythology"], ["publisher", "Simon & Schuster"], ["publish_date", "2020-09-01"], ["created_at", "2020-11-10 17:55:24.513782"], ["updated_at", "2020-11-10 17:55:24.513782"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Let Us Now Praise Famous Men"], ["author", "Lonnie Block III"], ["genre", "Fanfiction"], ["publisher", "Paulist Press"], ["publish_date", "2020-04-27"], ["created_at", "2020-11-10 17:55:24.517308"], ["updated_at", "2020-11-10 17:55:24.517308"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Beyond the Mexique Bay"], ["author", "Tim Ward"], ["genre", "Humor"], ["publisher", "HarperCollins"], ["publish_date", "2020-06-24"], ["created_at", "2020-11-10 17:55:24.521596"], ["updated_at", "2020-11-10 17:55:24.521596"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I Will Fear No Evil"], ["author", "Lanelle Kertzmann"], ["genre", "Mystery"], ["publisher", "Faber and Faber"], ["publish_date", "2020-01-25"], ["created_at", "2020-11-10 17:55:24.525141"], ["updated_at", "2020-11-10 17:55:24.525141"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Shall not Perish"], ["author", "Glynda Willms"], ["genre", "Mythology"], ["publisher", "Hachette Book Group USA"], ["publish_date", "2020-09-09"], ["created_at", "2020-11-10 17:55:24.528447"], ["updated_at", "2020-11-10 17:55:24.528447"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "In a Dry Season"], ["author", "Msgr. Dionne Wyman"], ["genre", "Essay"], ["publisher", "Brill Publishers"], ["publish_date", "2020-06-23"], ["created_at", "2020-11-10 17:55:24.532265"], ["updated_at", "2020-11-10 17:55:24.532265"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Yellow Meads of Asphodel"], ["author", "Pura Cremin"], ["genre", "Speech"], ["publisher", "Hamish Hamilton"], ["publish_date", "2020-09-15"], ["created_at", "2020-11-10 17:55:24.536381"], ["updated_at", "2020-11-10 17:55:24.536381"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Recalled to Life"], ["author", "Michale Jacobi"], ["genre", "Western"], ["publisher", "Newnes"], ["publish_date", "2020-08-02"], ["created_at", "2020-11-10 17:55:24.539907"], ["updated_at", "2020-11-10 17:55:24.539907"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "To a God Unknown"], ["author", "Jeannie Mann"], ["genre", "Fantasy"], ["publisher", "Reed Publishing"], ["publish_date", "2020-04-08"], ["created_at", "2020-11-10 17:55:24.544906"], ["updated_at", "2020-11-10 17:55:24.544906"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Infinite Jest"], ["author", "Tamara Mitchell"], ["genre", "Metafiction"], ["publisher", "Chambers Harrap"], ["publish_date", "2020-10-22"], ["created_at", "2020-11-10 17:55:24.548978"], ["updated_at", "2020-11-10 17:55:24.548978"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Grapes of Wrath"], ["author", "Dennise Medhurst"], ["genre", "Biography/Autobiography"], ["publisher", "Hay House"], ["publish_date", "2020-08-05"], ["created_at", "2020-11-10 17:55:24.553891"], ["updated_at", "2020-11-10 17:55:24.553891"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Cabbages and Kings"], ["author", "Sherrell Ritchie"], ["genre", "Fiction narrative"], ["publisher", "Simon & Schuster"], ["publish_date", "2020-03-28"], ["created_at", "2020-11-10 17:55:24.558205"], ["updated_at", "2020-11-10 17:55:24.558205"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Many Waters"], ["author", "Micaela Gislason"], ["genre", "Fiction in verse"], ["publisher", "St. Martin's Press"], ["publish_date", "2020-05-16"], ["created_at", "2020-11-10 17:55:24.562443"], ["updated_at", "2020-11-10 17:55:24.562443"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frequent Hearses"], ["author", "Willis Hirthe Esq."], ["genre", "Metafiction"], ["publisher", "HarperPrism"], ["publish_date", "2020-04-20"], ["created_at", "2020-11-10 17:55:24.566443"], ["updated_at", "2020-11-10 17:55:24.566443"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Skull Beneath the Skin"], ["author", "Pres. Neville McClure"], ["genre", "Fanfiction"], ["publisher", "Butterworth-Heinemann"], ["publish_date", "2020-11-06"], ["created_at", "2020-11-10 17:55:24.571311"], ["updated_at", "2020-11-10 17:55:24.571311"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Wildfire at Midnight"], ["author", "Rep. Roscoe Schmeler"], ["genre", "Mythology"], ["publisher", "John Blake Publishing"], ["publish_date", "2020-06-15"], ["created_at", "2020-11-10 17:55:24.575031"], ["updated_at", "2020-11-10 17:55:24.575031"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Great Work of Time"], ["author", "Victor Reichel DO"], ["genre", "Narrative nonfiction"], ["publisher", "Bloodaxe Books"], ["publish_date", "2020-11-02"], ["created_at", "2020-11-10 17:55:24.578402"], ["updated_at", "2020-11-10 17:55:24.578402"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fear and Trembling"], ["author", "Jodie Littel"], ["genre", "Reference book"], ["publisher", "HarperCollins"], ["publish_date", "2020-04-03"], ["created_at", "2020-11-10 17:55:24.582409"], ["updated_at", "2020-11-10 17:55:24.582409"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Look to Windward"], ["author", "Timothy Davis"], ["genre", "Western"], ["publisher", "Carnegie Mellon University Press"], ["publish_date", "2020-08-09"], ["created_at", "2020-11-10 17:55:24.586516"], ["updated_at", "2020-11-10 17:55:24.586516"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Eyeless in Gaza"], ["author", "Fay Baumbach"], ["genre", "Mythopoeia"], ["publisher", "Kensington Books"], ["publish_date", "2020-11-05"], ["created_at", "2020-11-10 17:55:24.590173"], ["updated_at", "2020-11-10 17:55:24.590173"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Moving Finger"], ["author", "Ivey Moen"], ["genre", "Folklore"], ["publisher", "Chatto and Windus"], ["publish_date", "2019-12-17"], ["created_at", "2020-11-10 17:55:24.594338"], ["updated_at", "2020-11-10 17:55:24.594338"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Blue Remembered Earth"], ["author", "Vergie Aufderhar"], ["genre", "Reference book"], ["publisher", "Ellora's Cave"], ["publish_date", "2020-02-26"], ["created_at", "2020-11-10 17:55:24.598098"], ["updated_at", "2020-11-10 17:55:24.598098"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Wildfire at Midnight"], ["author", "Rufus Kuvalis CPA"], ["genre", "Realistic fiction"], ["publisher", "Indiana University Press"], ["publish_date", "2020-02-04"], ["created_at", "2020-11-10 17:55:24.602698"], ["updated_at", "2020-11-10 17:55:24.602698"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Cover Her Face"], ["author", "Frances Kessler"], ["genre", "Textbook"], ["publisher", "Dalkey Archive Press"], ["publish_date", "2020-02-13"], ["created_at", "2020-11-10 17:55:24.606460"], ["updated_at", "2020-11-10 17:55:24.606460"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "A Darkling Plain"], ["author", "Prof. Pamila Mohr"], ["genre", "Mythopoeia"], ["publisher", "Left Book Club"], ["publish_date", "2020-05-17"], ["created_at", "2020-11-10 17:55:24.610177"], ["updated_at", "2020-11-10 17:55:24.610177"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All Passion Spent"], ["author", "Miriam Gibson I"], ["genre", "Historical fiction"], ["publisher", "Caister Academic Press"], ["publish_date", "2019-11-15"], ["created_at", "2020-11-10 17:55:24.613868"], ["updated_at", "2020-11-10 17:55:24.613868"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Consider the Lilies"], ["author", "Bradly Stark"], ["genre", "Fable"], ["publisher", "Candlewick Press"], ["publish_date", "2020-02-06"], ["created_at", "2020-11-10 17:55:24.617824"], ["updated_at", "2020-11-10 17:55:24.617824"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Have His Carcase"], ["author", "Rayford Zemlak JD"], ["genre", "Crime/Detective"], ["publisher", "Carcanet Press"], ["publish_date", "2020-09-01"], ["created_at", "2020-11-10 17:55:24.621964"], ["updated_at", "2020-11-10 17:55:24.621964"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Antic Hay"], ["author", "Isabella Bergstrom"], ["genre", "Fiction in verse"], ["publisher", "Bantam Books"], ["publish_date", "2020-07-11"], ["created_at", "2020-11-10 17:55:24.625885"], ["updated_at", "2020-11-10 17:55:24.625885"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Widening Gyre"], ["author", "Lesley McClure"], ["genre", "Fanfiction"], ["publisher", "FabJob"], ["publish_date", "2020-03-25"], ["created_at", "2020-11-10 17:55:24.629199"], ["updated_at", "2020-11-10 17:55:24.629199"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I Know Why the Caged Bird Sings"], ["author", "Donovan Russel"], ["genre", "Speech"], ["publisher", "HarperPrism"], ["publish_date", "2020-02-27"], ["created_at", "2020-11-10 17:55:24.632775"], ["updated_at", "2020-11-10 17:55:24.632775"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Such, Such Were the Joys"], ["author", "Trent Shanahan"], ["genre", "Textbook"], ["publisher", "Godwit Press"], ["publish_date", "2020-09-14"], ["created_at", "2020-11-10 17:55:24.636579"], ["updated_at", "2020-11-10 17:55:24.636579"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Last Enemy"], ["author", "Azalee Cruickshank"], ["genre", "Speech"], ["publisher", "Brimstone Press"], ["publish_date", "2020-01-08"], ["created_at", "2020-11-10 17:55:24.640104"], ["updated_at", "2020-11-10 17:55:24.640104"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "To Say Nothing of the Dog"], ["author", "Kirk Fahey Ret."], ["genre", "Mythopoeia"], ["publisher", "Carlton Publishing Group"], ["publish_date", "2020-09-03"], ["created_at", "2020-11-10 17:55:24.644051"], ["updated_at", "2020-11-10 17:55:24.644051"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "If Not Now, When?"], ["author", "Farah Tillman CPA"], ["genre", "Fanfiction"], ["publisher", "Newnes"], ["publish_date", "2020-04-28"], ["created_at", "2020-11-10 17:55:24.647495"], ["updated_at", "2020-11-10 17:55:24.647495"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Consider Phlebas"], ["author", "Brigitte Heidenreich I"], ["genre", "Suspense/Thriller"], ["publisher", "Seagull Books"], ["publish_date", "2020-11-06"], ["created_at", "2020-11-10 17:55:24.651814"], ["updated_at", "2020-11-10 17:55:24.651814"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Consider the Lilies"], ["author", "Desmond Kohler"], ["genre", "Fiction narrative"], ["publisher", "Candlewick Press"], ["publish_date", "2020-05-26"], ["created_at", "2020-11-10 17:55:24.655700"], ["updated_at", "2020-11-10 17:55:24.655700"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Yellow Meads of Asphodel"], ["author", "Malka Waters"], ["genre", "Fiction narrative"], ["publisher", "Emerald Group Publishing"], ["publish_date", "2020-09-04"], ["created_at", "2020-11-10 17:55:24.659390"], ["updated_at", "2020-11-10 17:55:24.659390"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Down to a Sunless Sea"], ["author", "Mrs. Kenneth Littel"], ["genre", "Historical fiction"], ["publisher", "Canongate Books"], ["publish_date", "2019-12-26"], ["created_at", "2020-11-10 17:55:24.663034"], ["updated_at", "2020-11-10 17:55:24.663034"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Dying of the Light"], ["author", "Elton Bins"], ["genre", "Textbook"], ["publisher", "Fearless Books"], ["publish_date", "2020-03-07"], ["created_at", "2020-11-10 17:55:24.667088"], ["updated_at", "2020-11-10 17:55:24.667088"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Man Within"], ["author", "Amb. Donnie Cummerata"], ["genre", "Mythopoeia"], ["publisher", "Sams Publishing"], ["publish_date", "2020-07-30"], ["created_at", "2020-11-10 17:55:24.671513"], ["updated_at", "2020-11-10 17:55:24.671513"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Mermaids Singing"], ["author", "Alex Nikolaus"], ["genre", "Mystery"], ["publisher", "Barrie & Jenkins"], ["publish_date", "2019-11-11"], ["created_at", "2020-11-10 17:55:24.675221"], ["updated_at", "2020-11-10 17:55:24.675221"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Such, Such Were the Joys"], ["author", "Amb. Robby Schmeler"], ["genre", "Mythopoeia"], ["publisher", "Simon & Schuster"], ["publish_date", "2020-02-08"], ["created_at", "2020-11-10 17:55:24.678846"], ["updated_at", "2020-11-10 17:55:24.678846"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Nine Coaches Waiting"], ["author", "Dylan Douglas"], ["genre", "Tall tale"], ["publisher", "Cengage Learning"], ["publish_date", "2020-04-22"], ["created_at", "2020-11-10 17:55:24.682549"], ["updated_at", "2020-11-10 17:55:24.682549"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "No Highway"], ["author", "Joshua Bashirian"], ["genre", "Reference book"], ["publisher", "G. P. Putnam's Sons"], ["publish_date", "2020-01-04"], ["created_at", "2020-11-10 17:55:24.686357"], ["updated_at", "2020-11-10 17:55:24.686357"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Time To Murder And Create"], ["author", "Sen. Rosendo Beer"], ["genre", "Mythopoeia"], ["publisher", "Zondervan"], ["publish_date", "2020-03-07"], ["created_at", "2020-11-10 17:55:24.689772"], ["updated_at", "2020-11-10 17:55:24.689772"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "publisher", "publish_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Noli Me Tangere"], ["author", "Sasha Kozey"], ["genre", "Science fiction"], ["publisher", "Heyday Books"], ["publish_date", "2020-05-24"], ["created_at", "2020-11-10 17:55:24.693255"], ["updated_at", "2020-11-10 17:55:24.693255"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/" for ::1 at 2020-11-10 12:56:41 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samc/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samc/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 294)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 1537)
+
+
+Started GET "/" for ::1 at 2020-11-10 12:56:54 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/samc/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/samc/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 294)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 1537)
+
+
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/books" for ::1 at 2020-11-10 12:59:23 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+  resource: books
+          ^
+):
+  
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+Started GET "/books" for ::1 at 2020-11-10 12:59:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/books"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-11-10 12:59:56 -0500
+Processing by BooksController#index as */*
+  Parameters: {"title"=>"Breakfast Blues", "artist_name"=>"the spunky pancakes", "artwork"=>"https://placehold.it/50x50.png", "book"=>{"title"=>"Breakfast Blues"}}
+Completed 204 No Content in 0ms (ActiveRecord: 3.5ms | Allocations: 109)
+
+
+Started GET "/books" for ::1 at 2020-11-10 12:59:57 -0500
+Processing by BooksController#index as */*
+  Parameters: {"title"=>"Breakfast Blues", "artist_name"=>"the spunky pancakes", "artwork"=>"https://placehold.it/50x50.png", "book"=>{"title"=>"Breakfast Blues"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 48)
+
+
+Started GET "/books" for ::1 at 2020-11-10 13:00:51 -0500
+Processing by BooksController#index as */*
+  Parameters: {"title"=>"Breakfast Blues", "artist_name"=>"the spunky pancakes", "artwork"=>"https://placehold.it/50x50.png", "book"=>{"title"=>"Breakfast Blues"}}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 8.0ms | Allocations: 20499)
+
+
+Started GET "/books" for ::1 at 2020-11-10 13:01:11 -0500
+Processing by BooksController#index as */*
+  Parameters: {"title"=>"Breakfast Blues", "artist_name"=>"the spunky pancakes", "artwork"=>"https://placehold.it/50x50.png", "book"=>{"title"=>"Breakfast Blues"}}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 8.3ms | Allocations: 20056)
+
+
+Started GET "/books" for ::1 at 2020-11-10 13:01:45 -0500
+Processing by BooksController#index as */*
+  Parameters: {"title"=>"Breakfast Blues", "artist_name"=>"the spunky pancakes", "artwork"=>"https://placehold.it/50x50.png", "book"=>{"title"=>"Breakfast Blues"}}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 7.3ms | Allocations: 20060)
+
+
+Started GET "/books/1" for ::1 at 2020-11-10 13:01:50 -0500
+Processing by BooksController#show as */*
+  Parameters: {"title"=>"Breakfast Blues", "artist_name"=>"the spunky pancakes", "artwork"=>"https://placehold.it/50x50.png", "id"=>"1", "book"=>{"title"=>"Breakfast Blues"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1226)
+
+
+Started POST "/books" for ::1 at 2020-11-10 13:07:05 -0500
+Processing by BooksController#create as */*
+  Parameters: {"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02", "book"=>{"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02"}}
+[31mUnpermitted parameters: :author, :genre, :publisher, :publish_date[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 6750)
+
+
+  
+NoMethodError (undefined method `save' for #<Class:0x00007f87042dd8f8>):
+  
+app/controllers/books_controller.rb:16:in `create'
+Started POST "/books" for ::1 at 2020-11-10 13:07:23 -0500
+Processing by BooksController#create as */*
+  Parameters: {"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02", "book"=>{"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02"}}
+[31mUnpermitted parameters: :author, :genre, :publisher, :publish_date[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:16:in `create'
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Squanto: The Man, The Myth, The Legend"], ["created_at", "2020-11-10 18:07:23.958457"], ["updated_at", "2020-11-10 18:07:23.958457"]]
+  ↳ app/controllers/books_controller.rb:16:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:16:in `create'
+Completed 201 Created in 23ms (Views: 0.4ms | ActiveRecord: 14.0ms | Allocations: 6337)
+
+
+Started DELETE "/books/201" for ::1 at 2020-11-10 13:10:06 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ')', expecting '}'
+...ook #{book.title}", book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:31: syntax error, unexpected ')', expecting '}'
+...: "deleted book #{book.title}")
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ')', expecting '}'
+app/controllers/books_controller.rb:31: syntax error, unexpected ')', expecting '}'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ')', expecting '}'
+app/controllers/books_controller.rb:31: syntax error, unexpected ')', expecting '}'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/books/201" for ::1 at 2020-11-10 13:10:33 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/books/201" for ::1 at 2020-11-10 13:10:48 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/books/201" for ::1 at 2020-11-10 13:10:57 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/books/201" for ::1 at 2020-11-10 13:11:03 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:44: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/books/201" for ::1 at 2020-11-10 13:11:14 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/books/201" for ::1 at 2020-11-10 13:11:39 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/books/201" for ::1 at 2020-11-10 13:11:43 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/books/201" for ::1 at 2020-11-10 13:11:44 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:41: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/books/201" for ::1 at 2020-11-10 13:12:23 -0500
+  
+SyntaxError (/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+..."updated book #{book.title}"}), book: book)
+...                              ^
+/Users/samc/Documents/seir/unit4/w11d1/rails-lessons/books_app_api/app/controllers/books_controller.rb:39: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:39: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/books_controller.rb:26: syntax error, unexpected ',', expecting `end'
+app/controllers/books_controller.rb:39: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/books/201" for ::1 at 2020-11-10 13:13:40 -0500
+Processing by BooksController#show as */*
+  Parameters: {"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02", "id"=>"201", "book"=>{"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02"}}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 201], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 7.1ms | Allocations: 901)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=201):
+  
+app/controllers/books_controller.rb:9:in `show'
+Started GET "/books/101" for ::1 at 2020-11-10 13:13:46 -0500
+Processing by BooksController#show as */*
+  Parameters: {"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02", "id"=>"101", "book"=>{"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Benny Hannuh", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02"}}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:9:in `show'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 4410)
+
+
+Started PUT "/books/101" for ::1 at 2020-11-10 13:14:00 -0500
+Processing by BooksController#update as */*
+  Parameters: {"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Ben Dovah", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02", "id"=>"101", "book"=>{"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Ben Dovah", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02"}}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:23:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:24:in `update'
+  [1m[36mBook Update (1.0ms)[0m  [1m[33mUPDATE "books" SET "author" = $1, "genre" = $2, "publisher" = $3, "publish_date" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["author", "Ben Dovah"], ["genre", "Instant Classic"], ["publisher", "Caister Academic Press"], ["publish_date", "2020-11-02"], ["updated_at", "2020-11-10 18:14:00.503512"], ["id", 101]]
+  ↳ app/controllers/books_controller.rb:24:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:24:in `update'
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 7.5ms | Allocations: 7045)
+
+
+Started DELETE "/books/101" for ::1 at 2020-11-10 13:14:04 -0500
+Processing by BooksController#destroy as */*
+  Parameters: {"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Ben Dovah", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02", "id"=>"101", "book"=>{"title"=>"Squanto: The Man, The Myth, The Legend", "author"=>"Ben Dovah", "genre"=>"Instant Classic", "publisher"=>"Caister Academic Press", "publish_date"=>"2020-11-02"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 101]]
+  ↳ app/controllers/books_controller.rb:29:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `destroy'
+Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2539)
+
+
